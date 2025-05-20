@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/my-app/', // If deploying to yourdomain.com/my-app/ <--- Line temporarily removed/commented out
+  // base: '/my-app/', // <--- REMOVE OR COMMENT OUT THIS LINE
   plugins: [react()],
   resolve: {
     alias: {
