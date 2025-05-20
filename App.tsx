@@ -16,6 +16,14 @@ import CookiePolicy from "./pages/CookiePolicy";
 
 const queryClient = new QueryClient();
 
+// Test component to verify rendering
+const TestComponent = () => (
+  <div style={{ padding: '20px', background: '#f0f0f0', margin: '20px' }}>
+    <h1>Test Component</h1>
+    <p>If you can see this, React is rendering correctly.</p>
+  </div>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider>
@@ -23,8 +31,8 @@ const App = () => (
         <ParallaxProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter 
-            // basename="/my-app"  // <--- REMOVE THIS LINE
+          <TestComponent />
+          <BrowserRouter
             future={{
               v7_startTransition: true,
               v7_relativeSplatPath: true,
@@ -37,7 +45,6 @@ const App = () => (
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="/cookie-policy" element={<CookiePolicy />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

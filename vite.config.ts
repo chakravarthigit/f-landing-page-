@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/my-app/', // <--- REMOVE OR COMMENT OUT THIS LINE
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -29,6 +29,8 @@ export default defineConfig({
       output: {
         manualChunks: undefined
       }
-    }
+    },
+    assetsDir: 'assets',
+    emptyOutDir: true
   }
 })
