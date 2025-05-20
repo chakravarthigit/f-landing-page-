@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 346 97% 41%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 346 97% 41%;
+
+    --primary: 346 97% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 346 97% 41%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 346 97% 41%;
+
+    --accent: 0 100% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 346 97% 41%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 0 0% 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .text-maroon {
+    color: #3B0000;
+  }
+
+  .text-red {
+    color: #D2042D; /* Updated to Cherish Red */
+  }
+
+  .dark-glass-panel {
+    @apply bg-white shadow-md rounded-2xl border border-gray-200;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white shadow-md rounded-2xl border border-gray-200;
+  }
+
+  .btn-maroon {
+    @apply bg-flavorsync-red hover:bg-flavorsync-darkmaroon text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
